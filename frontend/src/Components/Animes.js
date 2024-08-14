@@ -18,13 +18,21 @@ function Animes() {
 
   return (
     <section className="index" id="anime-list">
-      { animes.map((anime, index) => {
-        const {name, description} = Anime
+      {animes.map((anime, index) => {
+        const {name, description} = anime
         return (
-          //I didnt get to finish this part
+          <Anime key={anime.id} name={name} description={description}/> /* const props = {
+            key : anime.id,
+            name: name,
+            description: decription
+          }*/
+          // <div key={anime.id} className="anime-item">
+          //   <Link to={`/animes/${anime.id}`}
+          //   className="anime-link">{anime.name}</Link>
+          // </div>
         )
       })}
-      <p>No animes to display</p>
+      {/* <p>No animes to display</p> */}
     </section>
   );
 }
